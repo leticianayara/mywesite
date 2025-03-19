@@ -1,0 +1,28 @@
+Configuração da IDE - VSCode, Attom, Sublime
+
+Vamos usar o VSCode
+
+- Baixar o VSCode
+- Faça o download
+- Faça a instalação
+Pronto
+
+Ao instalar o vscode, verifique se o git esta instalado, senão tiver vai em extensions e digita git tools, instala e pronto
+
+Vá em settigns, digita "git enable" e verifique se esta marcado, senão tiver, marque
+
+Mexa o que precisar de mexer
+
+Vá da aba "Source Control" e clique em "Commit Initialize"
+
+Clico no(s) arquivo(s) que quero e aberto o botão de "+"
+
+Adiciono uma mensagem em cima do botão de "Commit"
+
+Depois clico no "Commit"
+
+Clico no "Publish", aceito os passos que ele me dá e pronto, o vscode esta integrado com o git 
+
+Após o primeiro passo, o push fica sempre mais fácil, para subir com os commits eu so preciso clicar no "Sync Changes"
+
+

@@ -1,0 +1,96 @@
+Configurando o git
+git config --glogal user.name "Leticia Costa"
+git config --global user.email leticia.costa@meta.com.br //leticianayara@gmail.com
+git config --global init.default branch main
+
+//Um exemplo de como pegar arquivos e colocar no git
+Copie os arquivos (git.zip) para o diretorio e abra o index.html 
+
+
+//Criando um repositório e inicializando ele
+Arraste a pasta do diretório onde fica o que vc quer que o git gerencie e digite "git init" (você esta inicializando seu repositório)
+
+
+//Adicionando o repositório (e suas dependências) ao repositorio
+Com o "git add ." (ou o nome de um arquivo) 
+
+Enquanto seus arquivos estiverem com o status de "untracked", eles NÃO são reconhecidos pelo git e não são versionados por ele, quando ele esta versionado, ele passa a situação de "tracked"
+
+Existem dois status para um arquivo quando colocado como "tracked",  staged (pronto pra commit) e unstaged (não pronto para commit)
+
+
+//Criando o commit
+Após adicionar os arquivos, dê um "git commit -m "<sua mensagem para lembrar o que vc fez>" " para colocar os arquivos prontos para subir pro repositório
+
+Neste passo (após dar o commit) eu já posso usar o SNAPSHOT criado pelo git para gerar versões do meu código.
+
+// git diff - mostra as diferenças em arquivo(s) do que esta no commit para o que esta na sua máquina.
+
+// os arquivos podem estar em 3 estágios: 
+		- working - estou trabalhando nele, não dei um "git add"
+		- staging - dei o "git add" mas não o "git commit"
+		- commit - dei o "git commit"
+// git log - mostra todos os commits feitos em ordem no formato de uma pilha (FILO)
+// git log --oneline - mostra todos os commits feitos em uma linha por commit (eles reduzem o numero do commit, que é em hexadecimal)
+
+
+//Pulando o staging (exceção) 
+	git commit -am "<mensagem>" ou git commit -a -m "<mensagem>"
+
+
+//Removendo e restaurando arquivos
+//remove
+git rm <nome do arquivo>.<tipo do arquivo> - remove o arquivo
+
+//restaura
+git restore --staged <nome do arquivo>.<tipo do arquivo> - restaura da parte de staged do arquivo
+git restore <nome do arquivo>.<tipo do arquivo> - restaura o arquivo 
+
+
+
+//Renomeando arquivos
+git mv <nome anterior>.<tipo do arquivo> <nome novo>.<tipo do arquivo> - muda o nome do arquivo e deixa ele pronto para ser commitado
+
+
+//Realizando um Amend na mensagem
+git commit -m "<mensagem>" --amend - altera a mensagem do ultimo commit
+
+
+//Log Detalhado
+git log -p - mostra as alterações em detalhes do que foi feito em cada commit, pressione a tecla q ou esc e saia do log
+
+//Git reset
+Tem 3 modelos:
+	soft - faz a mudança ate o commit que deseja, altera os arquivos, mas ele fica pronto para dar o commit (staged) e as classes posteriores continua existindo 
+	mixed - faz a mudança ate o commit que deseja, altera os arquivos, mas ele NÃO fica pronto para dar o
+commit (unstaged) e os arquivos posteriores continua existindo
+	hard - faz a mudança ate o commit que deseja, altera os arquivos, ele NÃO fica pronto para o commit (unstaged) e os arquivos posteriores NÃO existem mais
+
+git reset --<nome do modelo> <numero do commit>
+
+
+
+//git alias
+git config alias.<nome que quer dar> "<comando que quer utilizar ao chamar o nome>"
+
+git config alias.log1 "log --oneline" //muda somente da minha maquina
+git config --global alias.log1 "log --oneline" //muda em todas as maquinas que estiverem usando este git
+
+quando digitar "git log1" ele vai chamar a linha de comando "log --oneline"
+
+Os alias são armazenados no .gitconfig  onde ficam as raízes (C:\Users\leticia.costa)
+
+
+
+//Branch
+git branch - lista todas a branchs que vc tem
+
+git branch <nome da branch> - criando a branch
+git switch <nome da branch criada> - mudando de branch
+git merge -m "<mensagem adicionada>" <branch criada>
+
+
+//remover branch
+git branch -d <nome da branch> - remove a branch pra sempre da lista 
+
+
