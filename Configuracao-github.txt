@@ -1,0 +1,75 @@
+//Criar sua conta
+GitHub, GitLab
+email, senha
+
+//Criando o primeiro repositório
+1 - definir o nome do repositório 
+2 - define como publico ou privado
+3 - escolhe 3 opções:
+	Add a README file - se marcar a opção vai criar, senão não vai
+	Add .gitignore - se deixar none não cria, qualquer outra vai criar de acordo com a opção escolhida
+	Choose a license - se deixar none não cria, qualquer outra vai criar de acordo com a opção escolhida
+
+Por não ter marcado a opção do Add README ele te dá um passo a passo da próxima etapa 
+
+//git remote add origin <nome do diretório completo>/<nome do repositório>
+//git branch -M main
+
+
+//IMPORTANTE
+https - <seu token> - token criado no GitHub. - <meu perfil> -> Settings -> 
+SSH - <sua chave> - <meu perfil> -> Settings -> SSH and CPC Keys ->
+
+
+Com a criação do repositório, você pode criar 2 comandos: 
+	do https - precisa do token
+	do SSH - não precisa do token
+
+//Push de outras branch
+//git swicth - trocar de branch
+
+//git push --all
+
+
+//Merge entre as branchs
+Escolha o caminho onde esta a branch a receber o merge
+//git merge -m "<mensagem>" <branch a ser mergeada>
+
+
+//Criando um Issue - Problemas
+No repositório vá na aba Issues, clice no botão New issue, preencha o problema, defina para quem vai o issue (assignees), defina labels, type, projects, milestone se quiser e preferir, e clique no botão submin new issue (Create)
+
+Depois ele pode alterar o código de 2 maneiras:
+	- Baixando o código, alterando e fazendo os passos já conhecidos
+	- Através do próprio repositório
+		- Vá na aba Code
+		- Vá em "Edit file"
+		- Altere o que precisa
+		- Vá em "Commit changes..." 
+		- Preencha o que for necessário
+		- Aqui você escolhe entre dar um commit direto na main ou se prefere criar uma nova branch  e dar um pull request (eu prefiro criar uma nova branch e dar o pull)
+		- De o nome da sua branch (se esse for o caso) 
+		- Clique em "Propose changes"
+		- Ele vai abrir uma pagina de "Open a pull request" 
+		- Preencha o que for necessário
+		- Clique em "Create pull request"
+		- Ele vai pra pagina onde começou o conflito, e se você for o responsável vai aparecer pra você
+		- Vá em Development e selecione qual o issue que arrumou
+		- Clica no botão "Merge pull request"
+		- Se der certo ele vai aparecer que o merge foi feito e fechado e se você quiser pode deletar a branch
+
+
+//Relese
+Criando um release
+	- Va na aba "Code"
+	- Na parte direita da pagina, vá em "Releases"
+	- Clica o link "Create a new release"
+	- Escolha a tag (versão)
+	- Escolha o "Release title"
+	- Escolha o "Describe this release" 
+	- Clique em "Publish release" se estiver tudo pronto ou em "Save draft" se ainda tiver algo a mais pra fazer, mas ele só gera um release se clicar no publish
+
+
+//Realizando o Pull das alterações
+//git pull
+
